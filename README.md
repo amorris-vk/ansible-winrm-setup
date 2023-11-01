@@ -10,11 +10,11 @@ Add-LocalGroupMember -Group "Administrators" -Member "ops"
 
 ### download and run the WinRM setup powershell script (uncomment the one you want to use)
 
-### Opens port 5986 to all sources
-#$url = "https://raw.githubusercontent.com/amorris-vk/ansible-winrm-setup/main/ConfigureRemotingForAnsible.ps1"
-
 ### Opens port 5986 to jump server on VLAN 40
 #$url = "https://raw.githubusercontent.com/amorris-vk/ansible-winrm-setup/main/CAX_VDI_ConfigureRemotingForAnsible.ps1"
+
+### Opens port 5986 to all sources
+#$url = "https://raw.githubusercontent.com/amorris-vk/ansible-winrm-setup/main/ConfigureRemotingForAnsible.ps1"
 
 $datestr = Get-Date -UFormat "%Y%m%d_%H%M%S"
 $file = "{0}\ConfigureRemotingForAnsible_{1}.ps1" -f $env:temp, $datestr
